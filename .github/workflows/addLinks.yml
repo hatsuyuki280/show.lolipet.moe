@@ -44,3 +44,4 @@ jobs:
       run: |
         echo Add other actions to build,
         echo test, and deploy your project.
+        echo '$GITHUB_WORKSPACE' "$GITHUB_WORKSPACE"  # 看一下 $GITHUB_WORKSPACE是啥
