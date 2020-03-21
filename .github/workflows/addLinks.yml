@@ -1,0 +1,46 @@
+# 总之先整一个好像可以自动执行什么操作的这个玩玩好了。。。
+# 目测这个文件应该可以实现的效果是在修改了之后自动把咱的友链进行更新
+
+name: 添加友链
+
+# Controls when the action will run. Triggers the workflow on push or pull request 
+# events but only for the master branch
+on:
+  push:
+    branches: [master]
+    # paths : [Source/**]
+  pull_request:
+    branches: [master]
+    # paths : [Source/**]
+
+# A workflow run is made up of one or more jobs that can run sequentially or in parallel
+jobs:
+  # This workflow contains a single job called "build"
+  检查文件:
+    # The type of runner that the job will run on
+    runs-on: ubuntu-latest
+    
+    # Steps represent a sequence of tasks that will be executed as part of the job
+    steps:
+    - name: Setup Python
+      uses: actions/setup-python@v1.2.0 # 不是很懂。。。。不过好像这样就算装好python3.x了。。。
+    
+    # - name: Pip Installer
+      # uses: BSFishy/pip-action@v1
+      # with:
+        # 好像是说要把想装的pip的包都丢进去。。。但是现在好像不需要装什么包。。。
+        # packages: # optional, default is
+        
+    # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
+    - name: Checkout
+      uses: actions/checkout@v2
+
+    # Runs a single command using the runners shell
+    - name: Check Files
+      run: echo hello world!
+
+    # Runs a set of commands using the runners shell
+    - name: Run a multi-line script
+      run: |
+        echo Add other actions to build,
+        echo test, and deploy your project.
