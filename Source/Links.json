@@ -1,0 +1,8 @@
+{
+    "example links 1": {
+        "url": "https://www.example.com/",
+        "image": "/image/test_site_1.png",
+        "comment": "This is example links.",
+        "visible": false
+    }
+}
