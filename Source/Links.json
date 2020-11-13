@@ -1,8 +1,20 @@
 {
     "example links 1": {
         "url": "https://www.example.com/",
-        "image": "/image/test_site_1.png",
         "comment": "This is example links.",
-        "visible": false
+        "visible": false,
+        "LinkOK": true
+    },
+    "example links 2": {
+        "url": "https://www.example.com/",
+        "comment": "This is example links.",
+        "visible": true,
+        "LinkOK": true
+    },
+    "example links 3": {
+        "url": "https://www.example.com/",
+        "comment": "This is example links.",
+        "visible": true,
+        "LinkOK": true
     }
 }
